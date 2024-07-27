@@ -1,5 +1,4 @@
-@extends('layouts.app')
-
+@extends('layouts.master')
 @section('content')
     @if (request()->has('keyword'))
         <div class=" d-flex justify-content-between">
@@ -24,7 +23,7 @@
                 <div class=" mb-3">
                     {{ Str::words($article->description, 30, '...') }}
                 </div>
-                <a href="{{ route('detail', $article->slug) }}" class=" btn btn-dark">See More</a>
+                <a href="{{ route('detail', $article->slug) }}" class=" btn btn-outline-dark">See More</a>
             </div>
         </div>
     @empty

@@ -23,7 +23,16 @@
         @include('layouts.nav')
 
         <main class="py-4">
-            @yield('content')
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        @yield('content')
+                    </div>
+                    <div class="col-lg-4">
+                        @include('layouts.right-sidebar')
+                    </div>
+                </div>
+            </div>
         </main>
         <footer class="text-center bg-dark py-5 text-white mt-auto">
             <div class="mb-0">Page Footer</div>

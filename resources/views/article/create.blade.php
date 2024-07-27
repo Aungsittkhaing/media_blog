@@ -21,7 +21,8 @@
                             placeholder="like news, political, economics, IT, etc" value="{{ old('category') }}">
                             @foreach (App\Models\Category::all() as $category)
                                 <option value="{{ $category->id }}"
-                                    {{ old('category') == $category->id ? 'selected' : '' }}>{{ $category->title }}</option>
+                                    {{ old('category') == $category->id ? 'selected' : '' }}>{{ $category->title }}
+                                </option>
                             @endforeach
                         </select>
                         @error('category')

@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.master')
 @section('content')
     <h3 class="mb-2">
         <a href="" class="text-decoration-none text-dark mb-0">
@@ -13,4 +13,5 @@
     <div class="mb-3">
         {{ $article->description }}
     </div>
+    @include('layouts.comment')
 @endsection
